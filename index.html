@@ -16,11 +16,13 @@
       background-size: cover;
     }
     .content {
-      width: 30%;
+      width: 60%;
       background: rgba(255,255,255,0.5);
       margin: 20% auto;
-      padding: 10px;
+      padding: 20px;
+      text-align: center;
       border-radius: 4px;
+      font-size: 2em;
     }
     </style>
   </head>
@@ -28,8 +30,55 @@
     <div class="content well">
       <h1>Hallo Lena</h1>
       <p>Lass uns ein paar Aufgaben rechnen!</p>
+      
+      <form>
+        <span class="n" id="n1"></span>
+        <span class="op" id="op"></span>
+        <span class="n" id="n2"></span>
+        =
+        <input type="number" id="n3">
+      </form>
+      
+      <p id="result"></p>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/riot/2.3/riot+compiler.min.js"></script>
+    <script>
+    var 
+      n1, n2, op, success;
+    
+    function rand_between(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function numbers() {
+      n1 = rand_between(10, 20);
+      n2 = rand_between(10, 20);
+      op = Math.random() >= 0.5 ? '+' : '-';
+      $('#n1').text(n1);
+      $('#n2').text(n2);
+      $('#op').text(op);
+    }
+    
+    $(function () {
+      numbers();
+    });
+    
+    $('form').on('submit', function (e) {
+      if (op == '+') {
+        success = parseInt($('#n1').text()) + parseInt($('#n2').text()) == n1 + n2;
+      }
+      else {
+        success = parseInt($('#n1').text()) - parseInt($('#n2').text()) == n1 - n2;
+      }
+      if (success) {
+        $('#result').text('richtig');
+        numbers();
+      }
+      else {
+        $('#result').text('Nicht richtig. Probiere es noch einmal');
+        $('#n3').text('');
+      }
+    });
+    </script>
   </body>
 </html>
