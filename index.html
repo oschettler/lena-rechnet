@@ -33,6 +33,15 @@
       padding: 4px;
       font-size: 26px;
     }
+    r {
+      color: red;
+    }
+    g {
+      color: green;
+    }
+    y {
+      color: yellow;
+    }
     </style>
   </head>
   <body>
@@ -89,7 +98,7 @@
         success = parseInt($('#n1').text()) - parseInt($('#n2').text()) == n1 - n2;
       }
       if (success) {
-        $('#result').text('richtig');
+        $('#result').html('<span class="r">r</span><span class="g">i</span><span class="r">c</span><span class="y">h</span><span class="r">t</span><span class="g">i</span><span class="y">g</span>');
         setTimeout(function () {
           $('#result').html('&nbsp;');
           $('#n3').text('');
