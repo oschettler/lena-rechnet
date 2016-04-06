@@ -87,14 +87,15 @@
       if (success) {
         $('#result').text('richtig');
         setTimeout(function () {
+          $('#result').text('');
           numbers();
-        }, 4000);
+        }, 2000);
       }
       else {
         $('#result').text('Nicht richtig. Probiere es noch einmal');
         setTimeout(function () {
           $('#n3').text('');
-        }, 4000);
+        }, 2000);
       }
     });
     </script>
