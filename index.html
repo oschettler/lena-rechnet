@@ -76,6 +76,8 @@
     });
     
     $('form').on('submit', function (e) {
+      e.preventDefault();
+      
       if (op == '+') {
         success = parseInt($('#n1').text()) + parseInt($('#n2').text()) == n1 + n2;
       }
