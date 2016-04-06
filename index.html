@@ -24,6 +24,9 @@
       border-radius: 4px;
       font-size: 2em;
     }
+    .expr, input {
+      vertical-align: middle;
+    }
     </style>
   </head>
   <body>
@@ -32,10 +35,12 @@
       <p>Lass uns ein paar Aufgaben rechnen!</p>
       
       <form>
-        <span class="n" id="n1"></span>
-        <span class="op" id="op"></span>
-        <span class="n" id="n2"></span>
-        =
+        <div class="expr">
+          <span class="n" id="n1"></span>
+          <span class="op" id="op"></span>
+          <span class="n" id="n2"></span>
+          =
+        </div>
         <input type="number" id="n3">
         <input class="button-primary" type="submit" value="Los!">
       </form>
