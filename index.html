@@ -73,11 +73,15 @@
       }
       if (success) {
         $('#result').text('richtig');
-        numbers();
+        setTimeout(function () {
+          numbers();
+        }, 2000);
       }
       else {
         $('#result').text('Nicht richtig. Probiere es noch einmal');
-        $('#n3').text('');
+        setTimeout(function () {
+          $('#n3').text('');
+        }, 2000);
       }
     });
     </script>
