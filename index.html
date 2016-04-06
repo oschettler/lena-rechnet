@@ -101,14 +101,14 @@
         $('#result').html('<span class="r">r</span><span class="g">i</span><span class="r">c</span><span class="y">h</span><span class="r">t</span><span class="g">i</span><span class="y">g</span>');
         setTimeout(function () {
           $('#result').html('&nbsp;');
-          $('#n3').text('');
+          $('#n3').val('');
           numbers();
         }, 2000);
       }
       else {
         $('#result').text('Nicht richtig. Probiere es noch einmal');
         setTimeout(function () {
-          $('#n3').text('');
+          $('#n3').val('');
         }, 2000);
       }
     });
