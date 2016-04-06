@@ -18,7 +18,7 @@
     .content {
       width: 60%;
       background: rgba(255,255,255,0.5);
-      margin: 20% auto;
+      margin: 40% auto;
       padding: 20px;
       text-align: center;
       border-radius: 4px;
@@ -47,7 +47,7 @@
       n1, n2, op, success;
     
     function rand_between(min, max) {
-      return Math.random() * (max - min) + min;
+      return Math.round(Math.random() * (max - min) + min);
     }
 
     function numbers() {
