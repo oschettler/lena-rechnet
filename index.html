@@ -92,10 +92,10 @@
       e.preventDefault();
       
       if (op == '+') {
-        success = parseInt($('#n1').text()) + parseInt($('#n2').text()) == n1 + n2;
+        success = parseInt($('#n3').val()) == n1 + n2;
       }
       else {
-        success = parseInt($('#n1').text()) - parseInt($('#n2').text()) == n1 - n2;
+        success = parseInt($('#n3').val()) == n1 - n2;
       }
       if (success) {
         $('#result').html('<span class="r">r</span><span class="g">i</span><span class="r">c</span><span class="y">h</span><span class="r">t</span><span class="g">i</span><span class="y">g</span>');
