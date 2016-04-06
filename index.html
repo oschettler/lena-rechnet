@@ -50,7 +50,7 @@
         <input class="button-primary" type="submit" value="Los!">
       </form>
       
-      <p id="result"></p>
+      <p id="result">&nbsp;</p>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
@@ -91,6 +91,7 @@
         $('#result').text('richtig');
         setTimeout(function () {
           $('#result').text('');
+          $('#n3').text('');
           numbers();
         }, 2000);
       }
